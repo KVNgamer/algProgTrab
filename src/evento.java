@@ -1,13 +1,9 @@
 
 public class evento {
-	palestrante palestrante =new palestrante();
+	console console=new console();
 	
 	private String inst= null;//instituiçao
 	private int dt;//data
-	
-	public void addPalestrante() {
-		palestrante.informacaoPalestra();
-	}
 	
 	public String getInst() {
 		return inst;
@@ -20,6 +16,14 @@ public class evento {
 	}
 	public void setDt(int dt) {
 		this.dt = dt;
+	}
+	
+	public void novoEvento() {
+		palestra palestra =new palestra();
+		palestra.addPalestrante();
+		inst=console.print("qual sera a instituiçao onde ocorera o Evento ?");
+		dt=console.printInt("qual sera a data desse evento ?");
+		
 	}
 	
 }

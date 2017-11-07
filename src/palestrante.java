@@ -1,15 +1,15 @@
 
-public class palestrante {
-	palestra palestra=new palestra();
-	console console=new console();
-	
+public class palestrante {	
 	private String email,curriculo;
 	private int fone;
 	
 	public void informacaoPalestra() {
-	this.email="sdasdas@gmail.com";
-	this.curriculo="locurada total";
-	this.fone=516696364;
+	palestra palestra=new palestra();
+	console console=new console();
+	
+	email="sdasdas@gmail.com";
+	curriculo="locurada total";
+	fone=999023764;
 	palestra.setTitulo(console.print("qual o titulo da sua palestra ?"));
 	palestra.setDescricao(console.print("qual a descriicao da sua palestra?"));
 	palestra.setSala(console.printInt("qual sala sera usada ?"));
