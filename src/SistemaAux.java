@@ -3,6 +3,7 @@ public class SistemaAux {
 		
 	public static void main(String[] args) {
 		evento evento=new evento();
+		evento.inicializador();
 		while(true){
 			int i=menu();
 			
@@ -10,18 +11,20 @@ public class SistemaAux {
 				System.exit(0);
 			}
 			if(i==1) {
-				evento.novoEvento();
+				evento.novoSala();
 				}
-			if(i==2) {
-				evento.palestra.addParticipante();
+			if(i==2 && evento.contSala>0) {
+				evento.chamaParticipante();
 			}
-			if(i==3) {
-				evento.palestra.addPalestrante();
+			if(i==3 && evento.contSala>0) {
+				evento.chamaPalestrante();
 			}
-			if(i==4) {
+			if(i==4 && evento.contSala>0) {
 				impressora.imprimi(evento);
 			}
-			System.out.println("\nData:"+evento.getDt()+"			instituiçao:"+evento.getInst()+""+evento.InformacaoEvento());
+			if (i!=1 && evento.contSala==0) {
+				System.out.println("***ERRO:Nenhuma Sala para palestra criada\n");
+			}
 		}
 		
 		
@@ -46,9 +49,9 @@ Cada palestra deve ter um título, e um resumo para ser apresentado aos usuários;
 Palestrantes podem submeter palestras para o evento;------------
 Palestrantes devem fornecer, além dos dados das palestras, um currículo, um email, e um telefone;----------
 Participantes do evento devem fornecer o seu nome e um email;----------------
-	O sistema deve emitir um certificado, para palestrantes, organizadores e participantes do evento, de acordo com a sua participação no evento.
-O sistema deve carregar e salvar os dados a partr de arquivos texto, utilizando o formato CSV (Comma Separated Values).
-Este sistema será desenvolvido até o final do semestre, e para esta primeira versão, você deve permitir a criação de um evento, com duas salas de palestras, quatros palestras, três palestrantes, um organizador e dez participantes.
+O sistema deve emitir um certificado, para palestrantes, organizadores e participantes do evento, de acordo com a sua participação no evento.??????
+O sistema deve carregar e salvar os dados a partr de arquivos texto, utilizando o formato CSV (Comma Separated Values).???????
+Este sistema será desenvolvido até o final do semestre, e para esta primeira versão, você deve permitir a criação de um evento OKEY!, com duas salas de palestras OKEY!, quatros palestras OKEY!, três palestrantes OKEY!, um organizadorOKEY e dez participantesOKEY!.
 
 *
 *

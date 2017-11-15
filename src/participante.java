@@ -6,8 +6,9 @@ public class participante {
 
 	
 	public void informacaoParticipante() {
+		this.nome=console.print("qual seu nome ?");
 		this.email=console.print("qual seu email ?");
-		this.nome=console.print("qual seu email ?");
+	
 	}
 	
 	
